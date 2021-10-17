@@ -1,0 +1,30 @@
+{
+  "name": "@typhoon41/stylelint-config-gmf-vue",
+  "version": "1.0.0",
+  "author": "Nikola Dragićević (GMForce)",
+  "description": "GMForce's shareable config for vue & scss projects using stylelint.",
+  "license": "Apache-2.0",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "stylelint": "13.13.1",
+    "stylelint-config-property-sort-order-smacss": "7.1.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.4.0",
+    "stylelint-group-selectors": "1.0.8",
+    "stylelint-max-lines": "0.1.0",
+    "stylelint-scss": "3.21.0",
+    "stylelint-selector-no-empty": "1.0.8",
+    "stylelint-use-nesting": "3.0.0"
+  },
+  "peerDependencies": {
+    "stylelint": "13.13.1",
+    "stylelint-config-property-sort-order-smacss": "7.1.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.4.0",
+    "stylelint-group-selectors": "1.0.8",
+    "stylelint-max-lines": "0.1.0",
+    "stylelint-scss": "3.21.0",
+    "stylelint-selector-no-empty": "1.0.8",
+    "stylelint-use-nesting": "3.0.0"
+  }
+}
