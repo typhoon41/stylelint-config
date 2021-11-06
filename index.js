@@ -154,7 +154,10 @@ module.exports = {
     "scss/at-else-if-parentheses-space-before": "never",
     "scss/at-extend-no-missing-placeholder": true,
     "scss/at-function-parentheses-space-before": "never",
-    "scss/at-function-named-arguments": "never",
+	"scss/at-function-named-arguments": [
+	  "never",
+	  { "ignoreFunctions": ["adjust"] }
+	],
     "scss/at-if-closing-brace-newline-after": null,
     "scss/at-if-closing-brace-space-after": null,
     "scss/at-if-no-null": true,
