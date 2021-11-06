@@ -1,8 +1,8 @@
 {
-  "name": "@typhoon41/stylelint-config-gmf-vue",
+  "name": "@typhoon41/stylelint-config",
   "version": "1.0.0",
-  "author": "Nikola Dragićević (GMForce)",
-  "description": "GMForce's shareable config for vue & scss projects using stylelint.",
+  "author": "Nikola Dragićević",
+  "description": "Nikola Dragićević's shareable config for scss projects using stylelint.",
   "license": "Apache-2.0",
   "files": [
     "index.js"

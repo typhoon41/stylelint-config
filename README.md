@@ -1,13 +1,13 @@
-# @typhoon41/stylelint-config-gmf-vue
+# @typhoon41/stylelint-config
 
-> GMForce's shareable config for vue & scss projects using stylelint.
+> Strict, shareable config for scss projects using stylelint.
 
 To see the rules that this config uses, please read the [config itself](./index.js).
 
 ## Installation
 
 ```
-npm install stylelint @typhoon41/stylelint-config-gmf-vue --save-dev
+npm install stylelint @typhoon41/stylelint-config --save-dev
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ Just set your `stylelint` config to:
 
 ```json
 {
-  "extends": "@typhoon41/stylelint-config-gmf-vue"
+  "extends": "@typhoon41/stylelint-config"
 }
 ```
 
@@ -46,4 +46,4 @@ For example, to change the `at-rule-no-unknown` rule to use its `ignoreAtRules` 
 
 ## License
 
-Apache-2 © GMForce (Nikola Dragićević)
+Apache-2 © Nikola Dragićević
