@@ -26,5 +26,23 @@
     "stylelint-scss": "3.21.0",
     "stylelint-selector-no-empty": "1.0.8",
     "stylelint-use-nesting": "3.0.0"
-  }
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typhoon41/stylelint-config.git"
+  },
+  "keywords": [
+    "stylelint",
+    "config",
+    "scss",
+    "css"
+  ],
+  "bugs": {
+    "url": "https://github.com/typhoon41/stylelint-config/issues"
+  },
+  "homepage": "https://github.com/typhoon41/stylelint-config#readme"
 }
