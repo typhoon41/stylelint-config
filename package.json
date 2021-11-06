@@ -1,6 +1,6 @@
 {
   "name": "@typhoon41/stylelint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Nikola Dragićević",
   "description": "Nikola Dragićević's shareable config for scss projects using stylelint.",
   "license": "Apache-2.0",

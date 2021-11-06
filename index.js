@@ -156,7 +156,7 @@ module.exports = {
     "scss/at-function-parentheses-space-before": "never",
 	"scss/at-function-named-arguments": [
 	  "never",
-	  { "ignoreFunctions": ["adjust"] }
+	  { "ignoreFunctions": ["color.adjust"] }
 	],
     "scss/at-if-closing-brace-newline-after": null,
     "scss/at-if-closing-brace-space-after": null,
