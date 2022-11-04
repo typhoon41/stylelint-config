@@ -1,5 +1,6 @@
 'use strict';
 module.exports = {
+  customSyntax: "postcss-scss",
   ignoreAtRules: [ "else" ],
   extends: "stylelint-config-property-sort-order-smacss",
   plugins: [
@@ -12,6 +13,7 @@ module.exports = {
   ],
   rules: {
     "alpha-value-notation": "number",
+    "annotation-no-unknown": true,
     "at-rule-allowed-list": [ "use", "for", "if", "else", "include", "extend", "return", "error", "each", "mixin", "media", "function", "keyframes", "font-face", "forward", "at-root" ],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always",
@@ -47,6 +49,7 @@ module.exports = {
     "declaration-block-semicolon-newline-after": "always",
     "declaration-block-semicolon-newline-before": "never-multi-line",
     "declaration-block-single-line-max-declarations": 1,
+    "declaration-property-max-values": {},
     "declaration-no-important": true,
     "font-family-name-quotes": "always-unless-keyword",
     "font-family-no-duplicate-names": true,
@@ -60,6 +63,7 @@ module.exports = {
     "function-comma-space-before": "never",
     "function-linear-gradient-no-nonstandard-direction": true,
     "function-name-case": "lower",
+    "function-no-unknown": null,
     "function-parentheses-newline-inside": "never-multi-line",
     "function-parentheses-space-inside": "never",
     "function-url-no-scheme-relative": true,
@@ -67,6 +71,8 @@ module.exports = {
     "function-whitespace-after": "always",
     "hue-degree-notation": "number",
     "indentation": "tab",
+    "import-notation": "string",
+    "keyframe-block-no-duplicate-selectors": true,
     "keyframe-declaration-no-important": true,
     "length-zero-no-unit": true,
     "max-empty-lines": 1,
@@ -169,6 +175,10 @@ module.exports = {
     "scss/dollar-variable-colon-space-before": "never",
     "scss/double-slash-comment-whitespace-inside": "always",
     "scss/comment-no-empty": true,
+    "scss/function-no-unknown": [
+      true,
+      { "ignoreFunctions": ["/^-/"]}
+    ],
     "scss/function-quote-no-quoted-strings-inside": true,
     "scss/function-unquote-no-unquoted-strings-inside": true,
     "scss/operator-no-newline-after": true,
