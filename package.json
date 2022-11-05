@@ -1,6 +1,6 @@
 {
   "name": "@typhoon41/stylelint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Nikola Dragićević",
   "description": "Nikola Dragićević's shareable config for scss projects using stylelint.",
   "license": "Apache-2.0",
@@ -9,6 +9,8 @@
   ],
   "dependencies": {
     "stylelint": "14.14.1",
+    "postcss-scss": "4.0.5",
+    "postcss-html": "1.5.0",
     "stylelint-config-property-sort-order-smacss": "9.0.0",
     "stylelint-declaration-block-no-ignored-properties": "2.6.0",
     "stylelint-group-selectors": "1.0.9",
@@ -19,6 +21,8 @@
   },
   "peerDependencies": {
     "stylelint": "14.14.1",
+    "postcss-scss": "4.0.5",
+    "postcss-html": "1.5.0",
     "stylelint-config-property-sort-order-smacss": "9.0.0",
     "stylelint-declaration-block-no-ignored-properties": "2.6.0",
     "stylelint-group-selectors": "1.0.9",
