@@ -83,7 +83,11 @@ module.exports = {
       110,
       { "ignore": [ "comments" ] }
     ],
-    "max-nesting-depth": 3,
+    "max-nesting-depth": [
+      3, {
+        "ignoreAtRules": [ "include" ]
+      }
+    ],
     "media-feature-colon-space-after": "always",
     "media-feature-colon-space-before": "never",
     "media-feature-name-allowed-list": [ "min-width", "-ms-high-contrast" ],
