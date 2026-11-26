@@ -24,8 +24,8 @@ There are no unit tests; to see a rule's effect, link the package into a consume
 
 ## Editing rules
 
-- Every rule is listed explicitly, `null` included. Only `stylelint-config-property-sort-order-smacss` is extended
-  (property order), so a rule missing from the list is off.
+- Every rule is listed explicitly, `null` included. Nothing is extended while `stylelint-config-property-sort-order-smacss`
+  (property order) waits for stylelint 18 support (see `index.js`), so a rule missing from the list is off.
 - A key repeated in the `rules` object silently overrides the earlier one: keep each rule once.
 - After a dependency upgrade, go through its changelog for new, renamed and deprecated rules
   (an enabled rule the plugin removed breaks the load check).

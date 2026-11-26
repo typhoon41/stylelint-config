@@ -11,7 +11,6 @@
     "stylelint": "18.1.0",
     "postcss-scss": "4.0.9",
     "postcss-html": "2.0.1",
-    "stylelint-config-property-sort-order-smacss": "11.2.0",
     "@stylistic/stylelint-plugin": "6.0.1",
     "stylelint-declaration-block-no-ignored-properties": "3.1.0",
     "stylelint-group-selectors": "1.0.10",

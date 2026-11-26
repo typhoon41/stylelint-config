@@ -92,7 +92,9 @@ const namespaced = (prefix) => Object.fromEntries(
 
 module.exports = {
   customSyntax: "postcss-scss",
-  extends: "stylelint-config-property-sort-order-smacss",
+  // Property ordering is off until stylelint-config-property-sort-order-smacss supports stylelint 18
+  // (11.2.0 peers ^16.18.0 || ^17.0.0). Restore it with its dependency in package.json:
+  // extends: "stylelint-config-property-sort-order-smacss",
   overrides: [{
     "files": ["**/*.vue"],
     "customSyntax": "postcss-html"
