@@ -92,7 +92,6 @@ const namespaced = (prefix) => Object.fromEntries(
 
 module.exports = {
   customSyntax: "postcss-scss",
-  ignoreAtRules: ["else"],
   extends: "stylelint-config-property-sort-order-smacss",
   overrides: [{
     "files": ["**/*.vue"],
@@ -124,7 +123,10 @@ module.exports = {
     "at-rule-descriptor-value-no-unknown": null,
     "at-rule-no-deprecated": true,
     "at-rule-no-unknown": null,
-    "at-rule-prelude-no-invalid": true,
+    "at-rule-prelude-no-invalid": [
+      true,
+      { "ignoreAtRules": ["mixin", "function"] }
+    ],
     "block-no-empty": true,
     "block-no-redundant-nested-style-rules": true,
     "comment-no-empty": true,

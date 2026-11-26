@@ -6,8 +6,10 @@ To see the rules that this config uses, please read the [config itself](./index.
 
 ## Installation
 
+Stylelint and every plugin the config uses are dependencies of this package, so one install is enough:
+
 ```
-npm install stylelint @typhoon41/stylelint-config --save-dev
+npm install --save-dev @typhoon41/stylelint-config
 ```
 
 ## Usage
@@ -25,21 +27,15 @@ Just set your `stylelint` config to:
 
 Simply add a `"rules"` key to your config, then add your overrides and additions there.
 
-For example, to change the `at-rule-no-unknown` rule to use its `ignoreAtRules` option, change the `indentation` to tabs, turn off the `number-leading-zero` rule,and add the `unit-allowed-list` rule:
+For example, to indent with two spaces instead of tabs, allow the `fr` unit and turn off the `selector-max-id` rule:
 
 ```json
 {
-  "extends": "stylelint-config-standard",
+  "extends": "@typhoon41/stylelint-config",
   "rules": {
-    "at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": ["extends", "ignores"]
-      }
-    ],
-    "indentation": "tab",
-    "number-leading-zero": null,
-    "unit-allowed-list": ["em", "rem", "s"]
+    "@stylistic/indentation": 2,
+    "selector-max-id": null,
+    "unit-allowed-list": ["px", "%", "em", "rem", "vw", "deg", "ms", "s", "fr"]
   }
 }
 ```

@@ -1,29 +1,29 @@
+# Builds every push and PR; publishes to npmjs.org when a merge to main bumps the version in package.json,
+# after approval in the 'package-release' environment (toolkit release/docs/ADOPTING.md).
+
 trigger:
-- main
+  branches:
+    include: [ main ]
 
-pool:
-  vmImage: ubuntu-latest
+pr:
+  branches:
+    include: [ main ]
 
-steps:
-- task: Npm@1
-  displayName: 'Install npm packages'
-  inputs:
-    command: 'install'
+resources:
+  repositories:
+    - repository: toolkit
+      type: github
+      name: typhoon41/toolkit
+      endpoint: typhoon41
 
-- task: Npm@1
-  displayName: 'Package package'
-  inputs:
-    command: 'custom'
-    customCommand: 'pack'
-
-- task: CopyFiles@2
-  displayName: 'Copy archives to artifacts staging directory'
-  inputs:
-    contents: '*.tgz'
-    targetFolder: $(Build.ArtifactStagingDirectory)
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish artifacts'
-  inputs:
-    path: $(Build.ArtifactStagingDirectory)
-    artifact: package
+stages:
+  - template: release/templates/stages/package-release.yml@toolkit
+    parameters:
+      npmServiceConnection: 'NPM - typhoon41'
+      npmAccess: public                  # scoped @typhoon41 package on npmjs.org
+      nodeVersion: 22.x
+      buildSteps:
+        - pwsh: npm ci
+          displayName: Install packages
+        - pwsh: node validate-configuration.mjs
+          displayName: Validate configuration
